@@ -71,29 +71,17 @@ STAFF-QE-ASSESSMENT/
 git clone https://github.com/sandhyav201/staff-qe-assessment
 cd staff-qe-assessment
 
-
-## Running Tests
-
-Use the following commands to run tests 
-
-1. Run all tests:    npx playwright test
-2. Run a specific test file:     npx playwright test tests/uiTests/createUserTest.spec.js
-3. Run in headed mode (UI visible):    npx playwright test --headed   (headless mode is set to false in playwright.config.js. 
-So by default tests will run in headed mode)
-4. Run in interactive UI mode:  npx playwright test --ui
-
 Install Dependencies
 npm install
 npx playwright install
 
 🧪 Running Tests
+Run all tests: 
 npx playwright test
 Run a specific test:
 npx playwright test tests/uiTests/CreateUserTest.spec.js
-
 Run in headed mode (UI visible):
 npx playwright test --headed
-
 Run in interactive UI mode:
 npx playwright test --ui
 
@@ -152,9 +140,8 @@ npx allure generate ./allure-results --clean -o ./allure-report
 npx allure open ./allure-report
 
 Short cuts are added to the Package.json for easier running :
-
 "allure:generate": "npx allure generate ./allure-results --clean -o ./allure-report",
 "allure:open": "npx allure open ./allure-report",
 "test:allure": "npx playwright test && npx allure generate ./allure-results --clean -o ./allure-report && npx allure open ./allure-report"
 
- npm run test:allure - This will execute script, generate the allure report and open it in browser in one single step.
+npm run test:allure - This will execute script, generate the allure report and open it in browser in one single step.
