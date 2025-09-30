@@ -74,9 +74,10 @@ Install Dependencies
 npm install
 npx playwright install
 
-🧪 Running Tests
+# 🧪 Running Tests
 
-Run all tests: 
+Run all tests:
+
 npx playwright test
 Run a specific test:
 npx playwright test tests/uiTests/CreateUserTest.spec.js
@@ -85,9 +86,9 @@ npx playwright test --headed
 Run in interactive UI mode:
 npx playwright test --ui
 
-🌎 Running in Different Environments
+# 🌎 Running in Different Environments
 
-Configurations are managed via .env files in /utils. Example .env.local:
+Configurations are managed via .env files in /utils. eg: .env.local:
 
   This test suite can be executed on different test environments, ci,dev,local, staging and prod. 
   .env files are created under /utils folder to manage configuration for different environments.
@@ -97,6 +98,8 @@ ENV=local
 BASE_URL=http://localhost:4000
 MOCK_PORT=4000
 AUTH_TOKEN=token123
+
+
 ENV → The environment name (in this case, ci). This determines which .env file is loaded.
 BASE_URL → The base URL of the application under test.
 MOCK_PORT → Port where the local mock server runs.
@@ -110,7 +113,7 @@ Scripts in package.json:
   "test:ui:createUser": "ENV=relQA npx playwright test tests/uiTests/CreateUserTest.spec.js"
 }
 
-Usage 
+# Usage 
 
 To run against CI environment, set ENV=ci before executing Playwright tests:
 eg:   ENV=ci npx playwright test
@@ -118,7 +121,7 @@ This ensures the framework loads configuration from .env.ci and applies the corr
 
 👉 By default, .env.local is used. Other .env files contain mock test data. So cannot be executed at this point.
 
-📊 Reporting
+## 📊 Reporting
 
 | Reporter | Output Location                      | View Command                                                |
 | -------- | ------------------------------------ | ----------------------------------------------------------- |
@@ -140,7 +143,8 @@ Steps to see the allure report at the end of the tests:
 npx allure generate ./allure-results --clean -o ./allure-report
 npx allure open ./allure-report
 
-Short cuts are added to the Package.json for easier running :
+Short cuts are added to the Package.json for easier running
+
 "allure:generate": "npx allure generate ./allure-results --clean -o ./allure-report",
 "allure:open": "npx allure open ./allure-report",
 "test:allure": "npx playwright test && npx allure generate ./allure-results --clean -o ./allure-report && npx allure open ./allure-report"
