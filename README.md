@@ -41,10 +41,8 @@ STAFF-QE-ASSESSMENT/
 │── package.json                 # Project dependencies & scripts
 │── playwright.config.js         # Playwright configuration
 └── README.md                    # Project documentation
+```
 
-
-
----
 
 ## ⚙️ Tech Stack
 - **Language**: JavaScript / Node.js  
