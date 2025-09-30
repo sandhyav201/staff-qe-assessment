@@ -76,15 +76,11 @@ npx playwright install
 
 # 🧪 Running Tests
 
-Run all tests:
+1.npx playwright test: Run all tests
+2.Run a specific test: npx playwright test tests/uiTests/CreateUserTest.spec.js
+3.Run in headed mode (UI visible): npx playwright test --headed
+4.Run in interactive UI mode: npx playwright test --ui
 
-npx playwright test
-Run a specific test:
-npx playwright test tests/uiTests/CreateUserTest.spec.js
-Run in headed mode (UI visible):
-npx playwright test --headed
-Run in interactive UI mode:
-npx playwright test --ui
 
 # 🌎 Running in Different Environments
 
