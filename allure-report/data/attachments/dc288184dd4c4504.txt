@@ -1,0 +1,9 @@
+Sender Id is :  d3fab9fc-fc98-421c-91e5-fc51c4d05a90
+Recipient Id is :  d3fab9fc-fc98-421c-91e5-fc51c4d05a90
+The Transaction data is :  {
+  userId: 'd3fab9fc-fc98-421c-91e5-fc51c4d05a90',
+  amount: 123.45,
+  type: 'transfer',
+  recipientId: 'd3fab9fc-fc98-421c-91e5-fc51c4d05a90',
+  createdAt: '2025-09-30T06:08:08.055Z'
+}

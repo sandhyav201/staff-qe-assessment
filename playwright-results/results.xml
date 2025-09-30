@@ -1,0 +1,254 @@
+<testsuites id="" name="" tests="23" failures="0" skipped="0" errors="0" time="6.871102">
+<testsuite name="apiTests/AuthTests.spec.js" timestamp="2025-09-30T05:56:39.349Z" hostname="chromium" tests="3" failures="0" skipped="0" time="0.046" errors="0">
+<testcase name="User API › Authentication - Happy Path. GET users API passess with correct token " classname="apiTests/AuthTests.spec.js" time="0.007">
+<system-out>
+<![CDATA[Created user ID: 48fd9efb-3244-41ee-91ee-99387ec1c75f
+
+[[ATTACHMENT|../test-results/apiTests-AuthTests-User-AP-6cf33-passess-with-correct-token--chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="User API › Authentication with wrong token should return 401" classname="apiTests/AuthTests.spec.js" time="0.017">
+<system-out>
+<![CDATA[Created user ID: 3fbf8371-82bc-40b6-bf27-b05959139c12
+
+[[ATTACHMENT|../test-results/apiTests-AuthTests-User-AP-382c3-ong-token-should-return-401-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="User API › Authentication with empty token should return 401" classname="apiTests/AuthTests.spec.js" time="0.022">
+<system-out>
+<![CDATA[Created user ID: 1481e4f4-2a29-4cf4-9169-a1c464cdc52e
+
+[[ATTACHMENT|../test-results/apiTests-AuthTests-User-AP-c7bea-pty-token-should-return-401-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="apiTests/CreateUsers.spec.js" timestamp="2025-09-30T05:56:39.349Z" hostname="chromium" tests="5" failures="0" skipped="0" time="0.043" errors="0">
+<testcase name="User API › POST /api/users - success" classname="apiTests/CreateUsers.spec.js" time="0.017">
+<system-out>
+<![CDATA[User response object: {
+  id: [32m'adca9157-88cd-4f79-ab85-201959c985ad'[39m,
+  name: [32m'User mg65a85n0s2t'[39m,
+  email: [32m'user-mg65a85n0s2t@example.com'[39m,
+  accountType: [32m'premium'[39m,
+  createdAt: [32m'2025-09-30T05:56:39.767Z'[39m
+}
+
+[[ATTACHMENT|../test-results/apiTests-CreateUsers-User-API-POST-api-users---success-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="User API › POST /api/users - validation error (missing name)" classname="apiTests/CreateUsers.spec.js" time="0.004">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/apiTests-CreateUsers-User--d1d14-idation-error-missing-name--chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="User API › POST /api/users - validation error (missing email)" classname="apiTests/CreateUsers.spec.js" time="0.005">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/apiTests-CreateUsers-User--e6043-dation-error-missing-email--chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="User API › POST /api/users - validation error (missing name and email)" classname="apiTests/CreateUsers.spec.js" time="0.005">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/apiTests-CreateUsers-User--d149c-ror-missing-name-and-email--chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="User API › POST /api/users - duplicate email -&gt; 409" classname="apiTests/CreateUsers.spec.js" time="0.012">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/apiTests-CreateUsers-User--bc4fc-ers---duplicate-email---409-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="apiTests/DeleteUsers.spec.js" timestamp="2025-09-30T05:56:39.349Z" hostname="chromium" tests="2" failures="0" skipped="0" time="0.016" errors="0">
+<testcase name="User API › DELETE /api/users/:id - Happy Path-Testing with correct userid" classname="apiTests/DeleteUsers.spec.js" time="0.011">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/apiTests-DeleteUsers-User--e910c-Testing-with-correct-userid-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="User API › DELETE /api/users/:id - not found. Testing with an invalid userId" classname="apiTests/DeleteUsers.spec.js" time="0.005">
+<system-out>
+<![CDATA[Error response: { error: [32m'User not found'[39m }
+
+[[ATTACHMENT|../test-results/apiTests-DeleteUsers-User--7c3e9-ting-with-an-invalid-userId-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="apiTests/GetUsers.spec.js" timestamp="2025-09-30T05:56:39.349Z" hostname="chromium" tests="2" failures="0" skipped="0" time="0.011" errors="0">
+<testcase name="User API › GET /api/users/:id - Happy Path-Testing with correct userid" classname="apiTests/GetUsers.spec.js" time="0.003">
+<system-out>
+<![CDATA[Created user ID: eeece9ad-246f-46e7-9542-444dc6aa2c78
+User response object: {
+  id: [32m'eeece9ad-246f-46e7-9542-444dc6aa2c78'[39m,
+  name: [32m'User mg65a8bk3wy6'[39m,
+  email: [32m'user-mg65a8bk3wy6@example.com'[39m,
+  accountType: [32m'premium'[39m,
+  createdAt: [32m'2025-09-30T05:56:39.970Z'[39m
+}
+Fetched user: {
+  id: [32m'eeece9ad-246f-46e7-9542-444dc6aa2c78'[39m,
+  name: [32m'User mg65a8bk3wy6'[39m,
+  email: [32m'user-mg65a8bk3wy6@example.com'[39m,
+  accountType: [32m'premium'[39m,
+  createdAt: [32m'2025-09-30T05:56:39.970Z'[39m
+}
+
+[[ATTACHMENT|../test-results/apiTests-GetUsers-User-API-04dd9-Testing-with-correct-userid-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="User API › GET /api/users/:id - User not found. Testing with an invalid userId" classname="apiTests/GetUsers.spec.js" time="0.008">
+<system-out>
+<![CDATA[Created user ID: f73c106c-a002-41b7-9e89-8ed84781f933
+User response object: {
+  id: [32m'f73c106c-a002-41b7-9e89-8ed84781f933'[39m,
+  name: [32m'User mg65a8bq5l6g'[39m,
+  email: [32m'user-mg65a8bq5l6g@example.com'[39m,
+  accountType: [32m'premium'[39m,
+  createdAt: [32m'2025-09-30T05:56:39.975Z'[39m
+}
+Error response: { error: [32m'User not found'[39m }
+
+[[ATTACHMENT|../test-results/apiTests-GetUsers-User-API-56076-ting-with-an-invalid-userId-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="apiTests/TransactionTests.spec.js" timestamp="2025-09-30T05:56:39.349Z" hostname="chromium" tests="3" failures="0" skipped="0" time="0.033" errors="0">
+<testcase name="Transaction API › Create transaction - success" classname="apiTests/TransactionTests.spec.js" time="0.016">
+<system-out>
+<![CDATA[Sender Id is :  f1fb05fd-3084-4ef8-a8a1-eef3a7553712
+Recipient Id is :  f1fb05fd-3084-4ef8-a8a1-eef3a7553712
+The Transaction data is :  {
+  userId: [32m'f1fb05fd-3084-4ef8-a8a1-eef3a7553712'[39m,
+  amount: [33m123.45[39m,
+  type: [32m'transfer'[39m,
+  recipientId: [32m'f1fb05fd-3084-4ef8-a8a1-eef3a7553712'[39m,
+  createdAt: [32m'2025-09-30T05:56:40.006Z'[39m
+}
+
+[[ATTACHMENT|../test-results/apiTests-TransactionTests--4b7d2-reate-transaction---success-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transaction API › Create transaction - validation error (missing fields)" classname="apiTests/TransactionTests.spec.js" time="0.005">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/apiTests-TransactionTests--117c6-ation-error-missing-fields--chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Transaction API › Get user transactions - empty list or created items" classname="apiTests/TransactionTests.spec.js" time="0.012">
+<system-out>
+<![CDATA[List of transactions forUser mg65a8drv12g  is []
+List of transactions forUser mg65a8drv12g  is []
+
+[[ATTACHMENT|../test-results/apiTests-TransactionTests--24c6c-empty-list-or-created-items-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="apiTests/UpdateUser.spec.js" timestamp="2025-09-30T05:56:39.349Z" hostname="chromium" tests="1" failures="0" skipped="0" time="0.005" errors="0">
+<testcase name="User API › PUT /api/users/:id - Happy Path-Testing with correct userid" classname="apiTests/UpdateUser.spec.js" time="0.005">
+<system-out>
+<![CDATA[User Before Update : {
+  id: [32m'6e82b524-4756-49db-badf-28c871d4bdc4'[39m,
+  name: [32m'User mg65a8e1rw02'[39m,
+  email: [32m'user-mg65a8e1rw02@example.com'[39m,
+  accountType: [32m'premium'[39m,
+  createdAt: [32m'2025-09-30T05:56:40.059Z'[39m
+}
+Updated user: {
+  id: [32m'6e82b524-4756-49db-badf-28c871d4bdc4'[39m,
+  name: [32m'Mary Bill'[39m,
+  email: [32m'user-mg65a8e1rw02@example.com'[39m,
+  accountType: [32m'standard'[39m,
+  createdAt: [32m'2025-09-30T05:56:40.059Z'[39m
+}
+
+[[ATTACHMENT|../test-results/apiTests-UpdateUser-User-A-0ae93-Testing-with-correct-userid-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="uiTests/CreateTransactionTest.spec.js" timestamp="2025-09-30T05:56:39.349Z" hostname="chromium" tests="3" failures="0" skipped="0" time="5.548" errors="0">
+<testcase name="Create Transaction Tests  › Transaction creation flow - Happy Path" classname="uiTests/CreateTransactionTest.spec.js" time="1.839">
+<system-out>
+<![CDATA[Server running on port 4000
+Mock API server running on http://localhost:4000
+Use Authorization: Bearer token123 for requests
+{
+  userId: [32m'89892291-bec5-4813-af57-8eeb7b9be6ca'[39m,
+  amount: [33m100.5[39m,
+  type: [32m'transfer'[39m,
+  recipientId: [32m'7b96a598-1335-4618-a50d-c74a57768d85'[39m
+}
+
+[[ATTACHMENT|../test-results/uiTests-CreateTransactionT-83504--creation-flow---Happy-Path-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Create Transaction Tests  › Transaction creation flow - shows error on invalid payload(User not existing)" classname="uiTests/CreateTransactionTest.spec.js" time="1.839">
+<system-out>
+<![CDATA[Server running on port 4000
+Mock API server running on http://localhost:4000
+Use Authorization: Bearer token123 for requests
+
+[[ATTACHMENT|../test-results/uiTests-CreateTransactionT-a28f8--payload-User-not-existing--chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Create Transaction Tests  › Transaction with invalid user IDs shows error" classname="uiTests/CreateTransactionTest.spec.js" time="1.87">
+<system-out>
+<![CDATA[Server running on port 4000
+Mock API server running on http://localhost:4000
+Use Authorization: Bearer token123 for requests
+
+[[ATTACHMENT|../test-results/uiTests-CreateTransactionT-1c936-nvalid-user-IDs-shows-error-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="uiTests/CreateUserTest.spec.js" timestamp="2025-09-30T05:56:39.349Z" hostname="chromium" tests="4" failures="0" skipped="0" time="4.15" errors="0">
+<testcase name="UI Tests - User Regestration › User registration flow - Happy Path" classname="uiTests/CreateUserTest.spec.js" time="1.837">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/uiTests-CreateUserTest-UI--f5735-istration-flow---Happy-Path-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="UI Tests - User Regestration › User registration flow - Name missing" classname="uiTests/CreateUserTest.spec.js" time="0.769">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/uiTests-CreateUserTest-UI--04dfb-tration-flow---Name-missing-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="UI Tests - User Regestration › User registration flow - Email missing" classname="uiTests/CreateUserTest.spec.js" time="0.843">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/uiTests-CreateUserTest-UI--5bca7-ration-flow---Email-missing-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="UI Tests - User Regestration › User registration flow - Name and Email missing" classname="uiTests/CreateUserTest.spec.js" time="0.701">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/uiTests-CreateUserTest-UI--c37d7-ow---Name-and-Email-missing-chromium/trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

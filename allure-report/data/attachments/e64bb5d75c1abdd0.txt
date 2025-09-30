@@ -1,0 +1,9 @@
+Server running on port 4000
+Mock API server running on http://localhost:4000
+Use Authorization: Bearer token123 for requests
+{
+  userId: '1263fe3f-0db9-47e0-bf7d-e4f94b6c030d',
+  amount: 100.5,
+  type: 'transfer',
+  recipientId: 'df51fa1e-ee27-425d-b4e3-e7e871bc5ff9'
+}

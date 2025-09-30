@@ -1,0 +1,9 @@
+Created user ID: cfb7f9f7-cccc-413b-89a8-e363a51d9f9c
+User response object: {
+  id: 'cfb7f9f7-cccc-413b-89a8-e363a51d9f9c',
+  name: 'User mg65oz7vdfvr',
+  email: 'user-mg65oz7vdfvr@example.com',
+  accountType: 'premium',
+  createdAt: '2025-09-30T06:08:08.013Z'
+}
+Error response: { error: 'User not found' }

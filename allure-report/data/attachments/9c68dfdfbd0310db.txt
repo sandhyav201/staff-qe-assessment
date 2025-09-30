@@ -1,0 +1,7 @@
+User response object: {
+  id: 'bab18780-4c82-4893-bc4f-ba60c594979e',
+  name: 'User mg65oz1gfhlt',
+  email: 'user-mg65oz1gfhlt@example.com',
+  accountType: 'premium',
+  createdAt: '2025-09-30T06:08:07.791Z'
+}

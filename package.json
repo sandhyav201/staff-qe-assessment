@@ -1,0 +1,32 @@
+{
+  "name": "staff-qe-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:local": "npx playwright test",
+    "test:dev": "ENV=dev npx playwright test",
+    "test:relQA": "ENV=relQA npx playwright test",
+    "test:ui:createUser": "ENV=relQA npx playwright test tests/uiTests/CreateUserTest.spec.js",
+    "allure:generate": "npx allure generate ./allure-results --clean -o ./allure-report",
+    "allure:open": "npx allure open ./allure-report",
+    "test:allure": "npx playwright test && npx allure generate ./allure-results --clean -o ./allure-report && npx allure open ./allure-report"
+  },
+  "keywords": [],
+  "author": "Sandhya Velayudhan",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.55.1",
+    "@types/node": "^24.5.2",
+    "allure-playwright": "^3.4.1",
+    "body-parser": "^2.2.0",
+    "cross-env": "^10.1.0",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "faker": "^5.5.3",
+    "uuid": "^13.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}

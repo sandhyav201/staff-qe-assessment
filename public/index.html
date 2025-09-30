@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mock Fintech UI</title>
+  <style>
+    body { font-family: Arial; margin: 2em; }
+    input, select, button { margin: 0.5em 0; display: block; padding: 0.5em; }
+    #result { font-weight: bold; margin-top: 1em; }
+  </style>
+</head>
+<body>
+  <h1>Mock Fintech</h1>
+ <!-- User Registration -->
+  <h2>User Registration</h2>
+  <input id="name" placeholder="Name" />
+  <input id="email" placeholder="Email" />
+  <select id="accountType">
+    <option value="standard">Standard</option>
+    <option value="premium">Premium</option>
+  </select>
+  <button id="register">Register</button>
+  <div id="result"></div>
+
+   <!-- Transactions -->
+   <h2>Send Transaction</h2>
+   <input id="userId" placeholder="User ID" />
+   <input id="amount" placeholder="Amount" />
+   <select id="type">
+    <option value="transfer">Transfer</option>
+    <option value="deposit">Deposit</option>
+  </select>
+  <input id="recipientId" placeholder="Recipient Id" />
+   <button id="send">Send</button>
+   <div id="msg"></div>
+
+   <!-- List Transactions -->
+  <h2>Transaction History</h2>
+  <button id="list">List Transactions</button>
+  <div id="transactions"></div>
+
+  <script>
+    const authToken = 'token123';
+//User Regestration
+    document.getElementById('register').addEventListener('click', async () => {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const accountType = document.getElementById('accountType').value;
+
+      try {
+        const res = await fetch('/api/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${authToken}`
+          },
+          body: JSON.stringify({ name, email, accountType })
+        });
+
+        const data = await res.json();
+
+        document.getElementById('result').textContent =
+          res.status === 201 ? `SUCCESS: ${data.id}` : `ERROR: ${data.error || res.status}`;
+      } catch (err) {
+        document.getElementById('result').textContent = 'ERROR: ' + err.message;
+      }
+    });
+    // Transactions
+    document.getElementById('send').addEventListener('click', async () => {
+      const userId = document.getElementById('userId').value;
+      const amount = parseFloat(document.getElementById('amount').value);
+      const type = document.getElementById('type').value;
+      const recipientId = document.getElementById('recipientId').value;
+
+
+      try {
+        const res = await fetch('/api/transactions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${authToken}`
+          },
+          body: JSON.stringify({ userId, amount, type,recipientId })
+        });
+
+        const data = await res.json();
+
+        document.getElementById('msg').textContent =
+          res.status === 201 ? 'OK' : 'ERR: ' + (data.error || res.status);
+      } catch (err) {
+        document.getElementById('msg').textContent = 'ERROR: ' + err.message;
+      }
+    });
+
+
+    // List Transactions
+    document.getElementById('list').addEventListener('click', async () => {
+      try {
+        const res = await fetch('/api/transactions', {
+          method: 'GET',
+          headers: { 'Authorization': `Bearer ${authToken}` }
+        });
+
+        const data = await res.json();
+
+        if (res.status === 200 && Array.isArray(data)) {
+          const table = `
+            <table>
+              <tr><th>ID</th><th>User ID</th><th>Amount</th><th>Type</th></tr>
+              ${data.map(t => `
+                <tr>
+                  <td>${t.id}</td>
+                  <td>${t.userId}</td>
+                  <td>${t.amount}</td>
+                  <td>${t.type}</td>
+                </tr>
+              `).join('')}
+            </table>
+          `;
+          document.getElementById('transactions').innerHTML = table;
+        } else {
+          document.getElementById('transactions').textContent = 'No transactions found or error occurred.';
+        }
+      } catch (err) {
+        document.getElementById('transactions').textContent = 'ERROR: ' + err.message;
+      }
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,1253 @@
+{
+  "config": {
+    "configFile": "/Users/sandhyavelayudhan/staff-qe-assessment/playwright.config.js",
+    "rootDir": "/Users/sandhyavelayudhan/staff-qe-assessment/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        {
+          "printSteps": true
+        }
+      ],
+      [
+        "/Users/sandhyavelayudhan/staff-qe-assessment/node_modules/allure-playwright/dist/cjs/index.js",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-results/html-report",
+          "open": "never"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "playwright-results/results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "playwright-results/results.json"
+        }
+      ],
+      [
+        "blob",
+        {
+          "outputDir": "playwright-results/blob-report"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/sandhyavelayudhan/staff-qe-assessment/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 4,
+    "webServer": {
+      "command": "ENV=local node mock-server/server.js",
+      "port": 4000,
+      "reuseExistingServer": true,
+      "timeout": 30000
+    }
+  },
+  "suites": [
+    {
+      "title": "apiTests/AuthTests.spec.js",
+      "file": "apiTests/AuthTests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User API",
+          "file": "apiTests/AuthTests.spec.js",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Authentication - Happy Path. GET users API passess with correct token ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 7,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Created user ID: 48fd9efb-3244-41ee-91ee-99387ec1c75f\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.697Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-AuthTests-User-AP-6cf33-passess-with-correct-token--chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2dd13da12eadeda912ed-671b365145be09a9c7a4",
+              "file": "apiTests/AuthTests.spec.js",
+              "line": 29,
+              "column": 6
+            },
+            {
+              "title": "Authentication with wrong token should return 401",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 17,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Created user ID: 3fbf8371-82bc-40b6-bf27-b05959139c12\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.699Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-AuthTests-User-AP-382c3-ong-token-should-return-401-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2dd13da12eadeda912ed-c15ece334fe262309e0c",
+              "file": "apiTests/AuthTests.spec.js",
+              "line": 37,
+              "column": 5
+            },
+            {
+              "title": "Authentication with empty token should return 401",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 22,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Created user ID: 1481e4f4-2a29-4cf4-9169-a1c464cdc52e\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.704Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-AuthTests-User-AP-c7bea-pty-token-should-return-401-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "2dd13da12eadeda912ed-928c6f2a832771bd0b24",
+              "file": "apiTests/AuthTests.spec.js",
+              "line": 47,
+              "column": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "apiTests/CreateUsers.spec.js",
+      "file": "apiTests/CreateUsers.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User API",
+          "file": "apiTests/CreateUsers.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "POST /api/users - success",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 17,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "User response object: {\n  id: \u001b[32m'adca9157-88cd-4f79-ab85-201959c985ad'\u001b[39m,\n  name: \u001b[32m'User mg65a85n0s2t'\u001b[39m,\n  email: \u001b[32m'user-mg65a85n0s2t@example.com'\u001b[39m,\n  accountType: \u001b[32m'premium'\u001b[39m,\n  createdAt: \u001b[32m'2025-09-30T05:56:39.767Z'\u001b[39m\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.704Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-CreateUsers-User-API-POST-api-users---success-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "72bfef783a6f57a9ad00-52413790b54802e3ee3b",
+              "file": "apiTests/CreateUsers.spec.js",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "POST /api/users - validation error (missing name)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 4,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.801Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-CreateUsers-User--d1d14-idation-error-missing-name--chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "72bfef783a6f57a9ad00-4d46304460cdf0dbcd5e",
+              "file": "apiTests/CreateUsers.spec.js",
+              "line": 35,
+              "column": 3
+            },
+            {
+              "title": "POST /api/users - validation error (missing email)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.851Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-CreateUsers-User--e6043-dation-error-missing-email--chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "72bfef783a6f57a9ad00-08e7dcd4cdd9b81fd535",
+              "file": "apiTests/CreateUsers.spec.js",
+              "line": 44,
+              "column": 3
+            },
+            {
+              "title": "POST /api/users - validation error (missing name and email)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.909Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-CreateUsers-User--d149c-ror-missing-name-and-email--chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "72bfef783a6f57a9ad00-217cbb1da7084f1925d7",
+              "file": "apiTests/CreateUsers.spec.js",
+              "line": 52,
+              "column": 3
+            },
+            {
+              "title": "POST /api/users - duplicate email -> 409",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 12,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.852Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-CreateUsers-User--bc4fc-ers---duplicate-email---409-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "72bfef783a6f57a9ad00-2521a415c5fdc19f781f",
+              "file": "apiTests/CreateUsers.spec.js",
+              "line": 60,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "apiTests/DeleteUsers.spec.js",
+      "file": "apiTests/DeleteUsers.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User API",
+          "file": "apiTests/DeleteUsers.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "DELETE /api/users/:id - Happy Path-Testing with correct userid",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 11,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.864Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-DeleteUsers-User--e910c-Testing-with-correct-userid-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6a0a1655a1bfc00e7251-b735231673d4e7ac5026",
+              "file": "apiTests/DeleteUsers.spec.js",
+              "line": 33,
+              "column": 5
+            },
+            {
+              "title": "DELETE /api/users/:id - not found. Testing with an invalid userId",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Error response: { error: \u001b[32m'User not found'\u001b[39m }\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.889Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-DeleteUsers-User--7c3e9-ting-with-an-invalid-userId-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6a0a1655a1bfc00e7251-d53b7beed3fdeddcf878",
+              "file": "apiTests/DeleteUsers.spec.js",
+              "line": 42,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "apiTests/GetUsers.spec.js",
+      "file": "apiTests/GetUsers.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User API",
+          "file": "apiTests/GetUsers.spec.js",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "GET /api/users/:id - Happy Path-Testing with correct userid",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 3,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Created user ID: eeece9ad-246f-46e7-9542-444dc6aa2c78\n"
+                        },
+                        {
+                          "text": "User response object: {\n  id: \u001b[32m'eeece9ad-246f-46e7-9542-444dc6aa2c78'\u001b[39m,\n  name: \u001b[32m'User mg65a8bk3wy6'\u001b[39m,\n  email: \u001b[32m'user-mg65a8bk3wy6@example.com'\u001b[39m,\n  accountType: \u001b[32m'premium'\u001b[39m,\n  createdAt: \u001b[32m'2025-09-30T05:56:39.970Z'\u001b[39m\n}\n"
+                        },
+                        {
+                          "text": "Fetched user: {\n  id: \u001b[32m'eeece9ad-246f-46e7-9542-444dc6aa2c78'\u001b[39m,\n  name: \u001b[32m'User mg65a8bk3wy6'\u001b[39m,\n  email: \u001b[32m'user-mg65a8bk3wy6@example.com'\u001b[39m,\n  accountType: \u001b[32m'premium'\u001b[39m,\n  createdAt: \u001b[32m'2025-09-30T05:56:39.970Z'\u001b[39m\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.957Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-GetUsers-User-API-04dd9-Testing-with-correct-userid-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ecb294bdc961a4ab927-2b0cb0a67525324607ee",
+              "file": "apiTests/GetUsers.spec.js",
+              "line": 35,
+              "column": 5
+            },
+            {
+              "title": "GET /api/users/:id - User not found. Testing with an invalid userId",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Created user ID: f73c106c-a002-41b7-9e89-8ed84781f933\n"
+                        },
+                        {
+                          "text": "User response object: {\n  id: \u001b[32m'f73c106c-a002-41b7-9e89-8ed84781f933'\u001b[39m,\n  name: \u001b[32m'User mg65a8bq5l6g'\u001b[39m,\n  email: \u001b[32m'user-mg65a8bq5l6g@example.com'\u001b[39m,\n  accountType: \u001b[32m'premium'\u001b[39m,\n  createdAt: \u001b[32m'2025-09-30T05:56:39.975Z'\u001b[39m\n}\n"
+                        },
+                        {
+                          "text": "Error response: { error: \u001b[32m'User not found'\u001b[39m }\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.967Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-GetUsers-User-API-56076-ting-with-an-invalid-userId-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "3ecb294bdc961a4ab927-0ad10074297aca21116b",
+              "file": "apiTests/GetUsers.spec.js",
+              "line": 48,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "apiTests/TransactionTests.spec.js",
+      "file": "apiTests/TransactionTests.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Transaction API",
+          "file": "apiTests/TransactionTests.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Create transaction - success",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 16,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Sender Id is :  f1fb05fd-3084-4ef8-a8a1-eef3a7553712\n"
+                        },
+                        {
+                          "text": "Recipient Id is :  f1fb05fd-3084-4ef8-a8a1-eef3a7553712\n"
+                        },
+                        {
+                          "text": "The Transaction data is :  {\n  userId: \u001b[32m'f1fb05fd-3084-4ef8-a8a1-eef3a7553712'\u001b[39m,\n  amount: \u001b[33m123.45\u001b[39m,\n  type: \u001b[32m'transfer'\u001b[39m,\n  recipientId: \u001b[32m'f1fb05fd-3084-4ef8-a8a1-eef3a7553712'\u001b[39m,\n  createdAt: \u001b[32m'2025-09-30T05:56:40.006Z'\u001b[39m\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.974Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-TransactionTests--4b7d2-reate-transaction---success-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "634b81bc2a1333740fdc-1ee5a30e1a69b8e2f622",
+              "file": "apiTests/TransactionTests.spec.js",
+              "line": 22,
+              "column": 3
+            },
+            {
+              "title": "Create transaction - validation error (missing fields)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 5,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:39.991Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-TransactionTests--117c6-ation-error-missing-fields--chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "634b81bc2a1333740fdc-0ceca169ea0e7b53c7e1",
+              "file": "apiTests/TransactionTests.spec.js",
+              "line": 50,
+              "column": 3
+            },
+            {
+              "title": "Get user transactions - empty list or created items",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 12,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "List of transactions forUser mg65a8drv12g  is []\n"
+                        },
+                        {
+                          "text": "List of transactions forUser mg65a8drv12g  is []\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:40.028Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-TransactionTests--24c6c-empty-list-or-created-items-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "634b81bc2a1333740fdc-5fd5cd3b6ccff612ebe0",
+              "file": "apiTests/TransactionTests.spec.js",
+              "line": 58,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "apiTests/UpdateUser.spec.js",
+      "file": "apiTests/UpdateUser.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "User API",
+          "file": "apiTests/UpdateUser.spec.js",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "PUT /api/users/:id - Happy Path-Testing with correct userid",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "User Before Update : {\n  id: \u001b[32m'6e82b524-4756-49db-badf-28c871d4bdc4'\u001b[39m,\n  name: \u001b[32m'User mg65a8e1rw02'\u001b[39m,\n  email: \u001b[32m'user-mg65a8e1rw02@example.com'\u001b[39m,\n  accountType: \u001b[32m'premium'\u001b[39m,\n  createdAt: \u001b[32m'2025-09-30T05:56:40.059Z'\u001b[39m\n}\n"
+                        },
+                        {
+                          "text": "Updated user: {\n  id: \u001b[32m'6e82b524-4756-49db-badf-28c871d4bdc4'\u001b[39m,\n  name: \u001b[32m'Mary Bill'\u001b[39m,\n  email: \u001b[32m'user-mg65a8e1rw02@example.com'\u001b[39m,\n  accountType: \u001b[32m'standard'\u001b[39m,\n  createdAt: \u001b[32m'2025-09-30T05:56:40.059Z'\u001b[39m\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:40.052Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/apiTests-UpdateUser-User-A-0ae93-Testing-with-correct-userid-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "edff341e0049cb5b433e-86faa5c8935c8fe669af",
+              "file": "apiTests/UpdateUser.spec.js",
+              "line": 37,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "uiTests/CreateTransactionTest.spec.js",
+      "file": "uiTests/CreateTransactionTest.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Create Transaction Tests ",
+          "file": "uiTests/CreateTransactionTest.spec.js",
+          "line": 35,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Transaction creation flow - Happy Path",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1839,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Server running on port 4000\n"
+                        },
+                        {
+                          "text": "Mock API server running on http://localhost:4000\n"
+                        },
+                        {
+                          "text": "Use Authorization: Bearer token123 for requests\n"
+                        },
+                        {
+                          "text": "{\n  userId: \u001b[32m'89892291-bec5-4813-af57-8eeb7b9be6ca'\u001b[39m,\n  amount: \u001b[33m100.5\u001b[39m,\n  type: \u001b[32m'transfer'\u001b[39m,\n  recipientId: \u001b[32m'7b96a598-1335-4618-a50d-c74a57768d85'\u001b[39m\n}\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:40.096Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/uiTests-CreateTransactionT-83504--creation-flow---Happy-Path-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "551ae1810d600b7285b9-6785116158dfa631c039",
+              "file": "uiTests/CreateTransactionTest.spec.js",
+              "line": 37,
+              "column": 5
+            },
+            {
+              "title": "Transaction creation flow - shows error on invalid payload(User not existing)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1839,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Server running on port 4000\n"
+                        },
+                        {
+                          "text": "Mock API server running on http://localhost:4000\n"
+                        },
+                        {
+                          "text": "Use Authorization: Bearer token123 for requests\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:40.101Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/uiTests-CreateTransactionT-a28f8--payload-User-not-existing--chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "551ae1810d600b7285b9-2959d8090c237a52dacf",
+              "file": "uiTests/CreateTransactionTest.spec.js",
+              "line": 51,
+              "column": 5
+            },
+            {
+              "title": "Transaction with invalid user IDs shows error",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1870,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "Server running on port 4000\n"
+                        },
+                        {
+                          "text": "Mock API server running on http://localhost:4000\n"
+                        },
+                        {
+                          "text": "Use Authorization: Bearer token123 for requests\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:40.133Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/uiTests-CreateTransactionT-1c936-nvalid-user-IDs-shows-error-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "551ae1810d600b7285b9-a10524fc236304810ff1",
+              "file": "uiTests/CreateTransactionTest.spec.js",
+              "line": 64,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "uiTests/CreateUserTest.spec.js",
+      "file": "uiTests/CreateUserTest.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "UI Tests - User Regestration",
+          "file": "uiTests/CreateUserTest.spec.js",
+          "line": 9,
+          "column": 6,
+          "specs": [
+            {
+              "title": "User registration flow - Happy Path",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1837,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:40.121Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/uiTests-CreateUserTest-UI--f5735-istration-flow---Happy-Path-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cf28a311500b9fcbd60f-c8f014166073a55e341c",
+              "file": "uiTests/CreateUserTest.spec.js",
+              "line": 11,
+              "column": 3
+            },
+            {
+              "title": "User registration flow - Name missing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 769,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:44.650Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/uiTests-CreateUserTest-UI--04dfb-tration-flow---Name-missing-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cf28a311500b9fcbd60f-4b5cba89eba879fd93b9",
+              "file": "uiTests/CreateUserTest.spec.js",
+              "line": 21,
+              "column": 3
+            },
+            {
+              "title": "User registration flow - Email missing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 843,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:44.678Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/uiTests-CreateUserTest-UI--5bca7-ration-flow---Email-missing-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cf28a311500b9fcbd60f-0197296beaa62a2d5b85",
+              "file": "uiTests/CreateUserTest.spec.js",
+              "line": 31,
+              "column": 3
+            },
+            {
+              "title": "User registration flow - Name and Email missing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 150000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 701,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T05:56:44.684Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/sandhyavelayudhan/staff-qe-assessment/test-results/uiTests-CreateUserTest-UI--c37d7-ow---Name-and-Email-missing-chromium/trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cf28a311500b9fcbd60f-b1e90fefcf1cb01bd50a",
+              "file": "uiTests/CreateUserTest.spec.js",
+              "line": 41,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-30T05:56:38.872Z",
+    "duration": 6871.102,
+    "expected": 23,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

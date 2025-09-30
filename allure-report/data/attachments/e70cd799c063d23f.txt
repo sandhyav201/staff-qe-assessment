@@ -1,0 +1,3 @@
+Server running on port 4000
+Mock API server running on http://localhost:4000
+Use Authorization: Bearer token123 for requests

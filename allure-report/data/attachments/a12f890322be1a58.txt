@@ -1,0 +1,14 @@
+User Before Update : {
+  id: 'ad40b6fa-f47d-45af-8242-5e1e50d009c3',
+  name: 'User mg65ozabds1z',
+  email: 'user-mg65ozabds1z@example.com',
+  accountType: 'premium',
+  createdAt: '2025-09-30T06:08:08.100Z'
+}
+Updated user: {
+  id: 'ad40b6fa-f47d-45af-8242-5e1e50d009c3',
+  name: 'Mary Bill',
+  email: 'user-mg65ozabds1z@example.com',
+  accountType: 'standard',
+  createdAt: '2025-09-30T06:08:08.100Z'
+}
