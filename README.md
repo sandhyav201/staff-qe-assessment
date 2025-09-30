@@ -63,11 +63,10 @@ STAFF-QE-ASSESSMENT/
 ## 🚀 Setup
 
 ### Option 1: From ZIP
-1. Download `staff-qe-assessment.zip`  
-2. Extract to a folder (e.g., `C:\staff-qe-assessment` or `/Users/yourname/staff-qe-assessment`)  
+Download `staff-qe-assessment.zip`  
+Extract to a folder (e.g., `C:\staff-qe-assessment` or `/Users/yourname/staff-qe-assessment`)  
 
 ### Option 2: From GitHub
-```bash
 git clone https://github.com/sandhyav201/staff-qe-assessment
 cd staff-qe-assessment
 
