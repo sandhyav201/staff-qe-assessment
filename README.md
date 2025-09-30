@@ -55,15 +55,17 @@ Mock Server: Express.js
 5. [VSCode](https://code.visualstudio.com/download)
 
 ## SetUp
+From zip file :
+Download the staff-qe-assessment.zip file. Extract it to a folder, e.g., C:\staff-qe-assessment or /Users/yourname/staff-qe-assessment
+    OR
+From Git Repository
+Clone the repo : https://github.com/sandhyav201/staff-qe-assessment
 
-1. Download the staff-qe-assessment.zip file.
-
-2. Extract it to a folder, e.g., C:\staff-qe-assessment or /Users/yourname/staff-qe-assessment
-2. cd into this staff-qe-assessment directory.
-4. Run 'npm install' - This installs all Node.js dependencies listed in package.json, including Playwright and any reporters like Allure.
-5. Install Playwright browsers: : npx playwright install
+1. cd into this staff-qe-assessment directory.
+2. Run 'npm install' - This installs all Node.js dependencies listed in package.json, including Playwright and any reporters like Allure.
+3. Install Playwright browsers: : npx playwright install
 This ensures Chromium, Firefox, and WebKit are installed for testing.
-6. Set up VSCode
+4. Set up VSCode
 
 ## Running Tests
 
