@@ -14,34 +14,34 @@ This project demonstrates:
 ---
 
 ## 📂 Folder Structure
-
-
+```bash
 STAFF-QE-ASSESSMENT/
-│── mock-server/ # Mock API server
-│ └── server.js
+│── mock-server/                 # Mock API server
+│   └── server.js
 │
-│── pages/ # Page Object classes for UI tests
-│ ├── TransactionPage.js
-│ └── UserPage.js
+│── pages/                       # Page Object classes for UI tests
+│   ├── TransactionPage.js
+│   └── UserPage.js
 │
-│── public/ # Simple UI (HTML file)
-│ └── index.html
+│── public/                      # Simple UI (HTML file)
+│   └── index.html
 │
-│── tests/ # Test suites
-│ ├── apiTests/ # API test cases
-│ └── uiTests/ # UI test cases
+│── tests/                       # Test suites
+│   ├── apiTests/                # API test cases
+│   └── uiTests/                 # UI test cases
 │
-│── utils/ # Utilities & configuration
-│ ├── dataFactory.js # Test data factories (users, transactions, etc.)
-│ ├── environment.js # Loads environment variables from .env files
-│ ├── .env.local # Local environment variables
-│ ├── .env.dev # Development environment variables
-│ ├── .env.staging # Staging environment variables
-│ ├── .env.ci # CI environment variables
+│── utils/                       # Utilities & configuration
+│   ├── dataFactory.js           # Test data factories (users, transactions, etc.)
+│   ├── environment.js           # Loads environment variables from .env files
+│   ├── .env.local               # Local environment variables
+│   ├── .env.dev                 # Development environment variables
+│   ├── .env.staging             # Staging environment variables
+│   ├── .env.ci                  # CI environment variables
 │
-│── package.json # Project dependencies & scripts
-│── playwright.config.js # Playwright configuration
-└── README.md # Project documentation
+│── package.json                 # Project dependencies & scripts
+│── playwright.config.js         # Playwright configuration
+└── README.md                    # Project documentation
+
 
 
 ---
