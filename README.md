@@ -75,6 +75,7 @@ npm install
 npx playwright install
 
 🧪 Running Tests
+
 Run all tests: 
 npx playwright test
 Run a specific test:
@@ -91,6 +92,7 @@ Configurations are managed via .env files in /utils. Example .env.local:
   This test suite can be executed on different test environments, ci,dev,local, staging and prod. 
   .env files are created under /utils folder to manage configuration for different environments.
   eg: .env.local 
+  
 ENV=local
 BASE_URL=http://localhost:4000
 MOCK_PORT=4000
