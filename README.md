@@ -72,12 +72,9 @@ This ensures Chromium, Firefox, and WebKit are installed for testing.
 Use the following commands to run tests 
 
 1. Run all tests:    npx playwright test
-
 2. Run a specific test file:     npx playwright test tests/uiTests/createUserTest.spec.js
-
 3. Run in headed mode (UI visible):    npx playwright test --headed   (headless mode is set to false in playwright.config.js. 
 So by default tests will run in headed mode)
-
 4. Run in interactive UI mode:  npx playwright test --ui
 
 ## Running Tests in different test environments 
