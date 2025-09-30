@@ -1,71 +1,76 @@
+# Staff QE Assessment
 
-## Project Overview
+End-to-end test automation framework built with **Playwright** for a mock FinTech web application (API + UI).
 
-This project demonstrates end-to-end test automation using Playwright for a mock web application API and UI for a Fintech company . It includes:
+---
 
- API tests (CRUD operations)
+## 📌 Project Overview
+This project demonstrates:
+- ✅ API tests (CRUD operations)  
+- ✅ UI tests (happy paths & edge cases)  
+- ✅ Authentication handling  
+- ✅ Multiple reporters (Allure, HTML, JSON, etc.)  
 
- UI tests (happy paths and edge cases)
+---
 
- Authentication handling
+## 📂 Folder Structure
 
- Multiple reporters 
 
- Below is the folder structure for the project
-
- STAFF-QE-ASSESSMENT/
-│── mock-server/                 # Mock API server
-│   └── server.js
+STAFF-QE-ASSESSMENT/
+│── mock-server/ # Mock API server
+│ └── server.js
 │
-│── pages/                       # Page Object classes for UI tests
-│   ├── TransactionPage.js
-│   └── UserPage.js
+│── pages/ # Page Object classes for UI tests
+│ ├── TransactionPage.js
+│ └── UserPage.js
 │
-│── public/                      # html file for a simple UI
-│   └── index.html
+│── public/ # Simple UI (HTML file)
+│ └── index.html
 │
-│── tests/                       # Test suites
-│   ├── apiTests/                # API test cases
-│   └── uiTests/                 # UI test cases
+│── tests/ # Test suites
+│ ├── apiTests/ # API test cases
+│ └── uiTests/ # UI test cases
 │
-│── utils/                       # Utilities & configuration
-│   ├── dataFactory.js           # Factories for generating test data (users, transactions, etc.)
-│   ├── environment.js           # Loads environment variables from .env files
-│   ├── .env.local               # Local environment variables
-│   ├── .env.dev                 # Development environment variables
-│   ├── .env.staging             # Staging environment variables
-│   ├── .env.ci                  # CI environment variables
-│   
+│── utils/ # Utilities & configuration
+│ ├── dataFactory.js # Test data factories (users, transactions, etc.)
+│ ├── environment.js # Loads environment variables from .env files
+│ ├── .env.local # Local environment variables
+│ ├── .env.dev # Development environment variables
+│ ├── .env.staging # Staging environment variables
+│ ├── .env.ci # CI environment variables
 │
-│── package.json                 # Project dependencies & scripts
-│── playwright.config.js         # Playwright configuration
-└── README.md                    # Project documentation
+│── package.json # Project dependencies & scripts
+│── playwright.config.js # Playwright configuration
+└── README.md # Project documentation
 
 
+---
 
-## Tech Stack
-Language: JavaScript / Node.js
-Test Framework: Playwright Test
-Reporting: Allure, List, HTML, JSON, Blob, JUnit
-Mock Server: Express.js
+## ⚙️ Tech Stack
+- **Language**: JavaScript / Node.js  
+- **Test Framework**: Playwright Test  
+- **Reporting**: Allure, List, HTML, JSON, Blob, JUnit  
+- **Mock Server**: Express.js  
 
-## Prerequisites
+---
 
-2. [NodeJs](https://nodejs.org/en/download)
-5. [VSCode](https://code.visualstudio.com/download)
+## 🔧 Prerequisites
+- [Node.js](https://nodejs.org/en/download)  
+- [VS Code](https://code.visualstudio.com/download)  
 
-## SetUp
-From zip file :
-Download the staff-qe-assessment.zip file. Extract it to a folder, e.g., C:\staff-qe-assessment or /Users/yourname/staff-qe-assessment
-    OR
-From Git Repository
-Clone the repo : https://github.com/sandhyav201/staff-qe-assessment
+---
 
-1. cd into this staff-qe-assessment directory.
-2. Run 'npm install' - This installs all Node.js dependencies listed in package.json, including Playwright and any reporters like Allure.
-3. Install Playwright browsers: : npx playwright install
-This ensures Chromium, Firefox, and WebKit are installed for testing.
-4. Set up VSCode
+## 🚀 Setup
+
+### Option 1: From ZIP
+1. Download `staff-qe-assessment.zip`  
+2. Extract to a folder (e.g., `C:\staff-qe-assessment` or `/Users/yourname/staff-qe-assessment`)  
+
+### Option 2: From GitHub
+```bash
+git clone https://github.com/sandhyav201/staff-qe-assessment
+cd staff-qe-assessment
+
 
 ## Running Tests
 
@@ -77,55 +82,64 @@ Use the following commands to run tests
 So by default tests will run in headed mode)
 4. Run in interactive UI mode:  npx playwright test --ui
 
-## Running Tests in different test environments 
+Install Dependencies
+npm install
+npx playwright install
+
+🧪 Running Tests
+npx playwright test
+Run a specific test:
+npx playwright test tests/uiTests/CreateUserTest.spec.js
+
+Run in headed mode (UI visible):
+npx playwright test --headed
+
+Run in interactive UI mode:
+npx playwright test --ui
+
+🌎 Running in Different Environments
+
+Configurations are managed via .env files in /utils. Example .env.local:
 
   This test suite can be executed on different test environments, ci,dev,local, staging and prod. 
   .env files are created under /utils folder to manage configuration for different environments.
   eg: .env.local 
-
-      ENV=local
-      BASE_URL=http://localhost:4000
-      MOCK_PORT=4000
-      AUTH_TOKEN=token123
-
+ENV=local
+BASE_URL=http://localhost:4000
+MOCK_PORT=4000
+AUTH_TOKEN=token123
 ENV → The environment name (in this case, ci). This determines which .env file is loaded.
 BASE_URL → The base URL of the application under test.
 MOCK_PORT → Port where the local mock server runs.
 AUTH_TOKEN → Token required for authenticating API request
 
-Check the `scripts` section in `package.json` file to see how to run tests.
+Scripts in package.json:
 "scripts": {
-    "test:local": "npx playwright test",
-    "test:dev": "ENV=dev npx playwright test",
-    "test:relQA": "ENV=relQA npx playwright test",
-    "test:ui:createUser": "ENV=relQA npx playwright test tests/uiTests/CreateUserTest.spec.js"
-  }
+  "test:local": "npx playwright test",
+  "test:dev": "ENV=dev npx playwright test",
+  "test:relQA": "ENV=relQA npx playwright test",
+  "test:ui:createUser": "ENV=relQA npx playwright test tests/uiTests/CreateUserTest.spec.js"
+}
 
-## Usage 
+Usage 
 
-By default, tests run with .env.local.
 To run against CI environment, set ENV=ci before executing Playwright tests:
-eg:
-ENV=ci npx playwright test
+eg:   ENV=ci npx playwright test
 This ensures the framework loads configuration from .env.ci and applies the correct base URL, mock server port, and authentication token.
 
-Important Note : .env.local only will work now for executing the tests . All the other .env files are loaded with mock test data. 
+👉 By default, .env.local is used. Other .env files contain mock test data. So cannot be executed at this point.
 
-## Report Generation
-Reporter	  Output Location	                        How to View
+📊 Reporting
 
-List	      Terminal	                                Automatic during test run
+| Reporter | Output Location                      | View Command                                                |
+| -------- | ------------------------------------ | ----------------------------------------------------------- |
+| List     | Terminal                             | Automatic                                                   |
+| Allure   | `allure-results/` → `allure-report/` | `npx allure open ./allure-report`                           |
+| HTML     | `playwright-results/html-report`     | `npx playwright show-report playwright-results/html-report` |
+| JSON     | `playwright-results/results.json`    | Open in editor                                              |
+| JUnit    | `playwright-results/results.xml`     | CI dashboards (Jenkins, GitLab, etc.)                       |
+| Blob     | `playwright-results/blob-report`     | `npx playwright show-report playwright-results/blob-report` |
 
-Allure        allure-results/                           npx allure generate ./allure-results --clean -o ./allure-report
-                                                        npx allure open ./allure-report
-
-HTML	      playwright-results/html-report	        npx playwright show-report playwright-results/html-report
-
-JSON	      playwright-results/results.json	        Open in editor or parse programmatically
-
-JUnit	      playwright-results/results.xml	        CI dashboards (Jenkins, GitLab, etc.)
-
-Blob	      playwright-results/blob-report	        npx playwright show-report playwright-results/blob-report
 
 
 Allure reporting is installed for this test framework to generate a visual, interactive and detailed reports for automated tests.
